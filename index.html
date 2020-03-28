@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+    margin:0px;
+    padding:0px;
+}
+.bgimage{
+       background-image: url(IMG20190914200955.jpg);
+       background-size: 100% 100%;
+       font-family: Arial;
+       width: 100%;
+       height: 100vh;
+}
+IMG20190914200955{max-width: 100%}
+#demo{
+     color: orange;
+    background-color: rgba(0,0,0,0.5);
+}
+.leftmenu{
+        width: 20%;
+        line-height: 100px;
+        float: left;
+}
+.leftmenu h1{
+             padding-left: 70px;
+             font-weight: bold;
+             color: white;
+}
+.leftmenu h1:hover{
+   color: orange;
+}
+.rightmenu{
+        width: 75%;
+        line-height: 50px;
+        float: right;
+}
+.rightmenu ul{
+             margin-left: 600px;
+}
+.rightmenu ul li{
+                display: inline-block;
+                list-style: none;
+                font-size: 15px;
+                color: white;
+                font-weight: bold;
+                line-height: 100px;
+                margin-left: 40px;
+}
+#fist{
+    color: Orange;
+}
+#second{
+    color: green;
+}
+.rightmenu ul li:hover{
+    color: orange;
+}
+.text{
+     width: 100%;
+     text-align: center;
+     color: white;
+}
+.text h3{
+     font-size: 25px;
+     margin: 20px 0px;
+}
+.text h1{
+     font-size: 60px;
+     font-weight: bold;
+     margin: 5px 0px;
+     color: darkorange;
+}
+.text h2{
+       color: green;
+}
+.text h1:hover{
+           color: white;
+}
+.text h2{
+        margin: 0px 0px;
+}
+.text h2:hover{
+           color: white;
+}
+.text h4:hover{
+           color: white;
+}
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+     <div class="bgimage">
+         <div class="menu">
+             <div class="leftmenu">
+             <h1>PSIT</h1>
+             </div>
+             <div class="rightmenu">
+                <ul>
+                    <li id="fist"> THIS </li>
+                    <li> TOO </li>
+                    <li> SHALL </li>
+                    <li id="second"> PASS </li>
+                <ul>
+         </div>
+         <div class="text">
+             <h4>DHANANJAY MISHRA</h4>
+             <h1>PLEASE STAY AT HOME</h1>
+             <h4>A lockdown is an emergency protocol that prevents contry</h4>
+             <h3> Prime Minister of India announced a 21-day nationwide lockdown to fight the coronavirus pandemic</h3>
+             <h2>REMAINING TIME</h2>
+         </div>
+     </div>
+<p id="demo"></p>
+
+<script>
+var countDownDate = new Date("April 14, 2020 23:59:59").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  
+document.getElementById("demo").innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ";
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
